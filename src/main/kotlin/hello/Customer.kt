@@ -1,13 +1,12 @@
 package hello
 
-import javax.persistence.Entity
-import javax.persistence.GeneratedValue
-import javax.persistence.GenerationType
-import javax.persistence.Id
+import jakarta.persistence.Entity
+import jakarta.persistence.GeneratedValue
+import jakarta.persistence.Id
 
 @Entity
 data class Customer(
 		val firstName: String,
 		val lastName: String,
 		@Id @GeneratedValue
-		val id: Long = -1)
+		val id: Long? = null)
